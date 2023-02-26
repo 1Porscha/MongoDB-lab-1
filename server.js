@@ -123,22 +123,11 @@ app.get('/veggies', async (req, res) => {
     res.json(response);
 
 })
-// //route will show one specific veggie name
-// app.get('/veggie/:veggieName', async (req, res) =>{
-//  //usually get the id from the front end (req.body.theID), (req.body.params.id), or (req.guery.fruitId)   
-//     let id = req.params.veggieName
-
-//     let response = await MyVeggie.findById(id)
-//     console.log(response)
-//     res.send(response)
-// })
 
 
+//route will show one specific veggie name
 app.get('/veggie/:veggieName', async (req, res) =>{
-    // let id = req.params.veggieName
-
-    // let response = await MyVeggie.findById(id)
-    // res.send(response)
+  
     let showId = req.params.veggieName
     console.log(showId)
 
@@ -147,18 +136,6 @@ app.get('/veggie/:veggieName', async (req, res) =>{
     res.json(response)
 })
 
-
-
-
-// //route will show all fruit
-// app.get('/fruits', async (req, res) => {
-//     // get data from database
-//     let response = await MyFruit.find({});
-//     console.log(response);
-//     // send it back to front end
-//     res.json(response)
-
-// })
 
  app.listen(5000, () => {
      console.log(`Server is Listening on 5000`)
