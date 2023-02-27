@@ -126,9 +126,9 @@ app.get('/veggies', async (req, res) => {
 
 
 //route will show one specific veggie name
-app.get('/veggie/:veggieName', async (req, res) =>{
-  
-    let showId = req.params.veggieName
+app.get('/veggie/:id', async (req, res) =>{
+    //Get data from database 
+    let showId = req.params.id
     console.log(showId)
 
     let response = await MyVeggie.findOne({_id: showId})
