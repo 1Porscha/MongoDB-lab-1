@@ -22,11 +22,11 @@ const getSingleVeggie = async () =>{
 
     console.log(finalResponse);
 
- //use this finalData to display item information    
+ //use this finaResponse to display item information    
    
     let containerElement = document.getElementById('container')
     containerElement.innerHTML = `
-    <div class="single-product">
+    <div class="single-veggie">
         <h1>${finalResponse.name}</h1>
         <h3>${finalResponse.color}</h3>
         <h3> Price $${finalResponse.age}</h3>
